@@ -4,6 +4,9 @@ import HeaderSearch from './HeaderSearch'
 import HeaderNavigation from './HeaderNavigation'
 import tw, { styled } from 'twin.macro'
 
+/**
+ * 
+ */
 const HeaderStyled = styled.header`
     ${tw`flex items-stretch border-b-2 border-gray-800`}
 
@@ -17,12 +20,20 @@ const HeaderStyled = styled.header`
     .header_navigation {
 
     }
-
     svg {
-        ${tw`fill-current text-gray-300`}
+        ${tw`fill-current text-gray-400`}
+        
+        &[fill="none"] {
+            fill: none;
+            ${tw`stroke-current`}
+        }
     }
 `;
 
+
+/**
+ * 
+ */
 const Header = () => {
     return (
         <HeaderStyled className="header">

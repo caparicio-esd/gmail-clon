@@ -13,6 +13,8 @@ const HeaderSearchStyled = styled.div`
 `;
 
 const HeaderSearch = () => {
+    
+
     return (
         <HeaderSearchStyled className="header_search">
             <SearchIcon style={{width: '21px'}} />
