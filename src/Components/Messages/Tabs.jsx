@@ -1,6 +1,6 @@
 import React from 'react'
 import tw, { styled } from 'twin.macro';
-import Message from './Message';
+import Message from './Message/Message';
 import { useSelector } from 'react-redux'
 
 const TabsStyled = styled.div`

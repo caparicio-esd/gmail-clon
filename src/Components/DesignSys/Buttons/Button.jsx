@@ -29,7 +29,7 @@ const Button = ({openNewMessage, clickHandler, ...props}) => {
     }
 
     return (
-        <Btn onClick={props.type == "compose" ? openNewMessage : clickHandler} buttonType={props.type}>{props.children}</Btn>
+        <Btn onClick={props.type === "compose" ? openNewMessage : clickHandler} buttonType={props.type}>{props.children}</Btn>
     )
 }
 
