@@ -36,6 +36,26 @@ const MessageStyled = styled.article`
             .message_time { 
                 ${tw`text-gray-500`}
             }
+            .message_menu {
+                ${tw`ml-2`}
+                position: relative;
+
+                .message_menu_content {
+                    position: absolute;
+                    right: 2rem;
+                    top: 0%;
+                    z-index: 2;
+                    width: 200px;
+                    ${tw`p-2 bg-gray-100 text-gray-800`}
+
+                    ul {
+                        ${tw`m-0 p-0 list-none`}
+                        li {
+                            ${tw`flex justify-end items-center`}
+                        }
+                    }
+                }
+            }
         }
         .message_subject { 
             ${tw`mb-1 font-semibold truncate w-4/5 text-gray-300`}
