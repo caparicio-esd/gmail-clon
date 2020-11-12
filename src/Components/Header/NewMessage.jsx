@@ -1,17 +1,17 @@
-import React from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import tw, { styled } from 'twin.macro'
-import Button from '../DesignSys/Buttons/Button'
-import Input from '../DesignSys/Inputs/InputText'
-import Textarea from '../DesignSys/Inputs/Textarea'
-import CloseIcon from './../DesignSys/Icons/Solid/X'
+import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import tw, { styled } from 'twin.macro';
+import Button from '../DesignSys/Buttons/Button';
+import Input from '../DesignSys/Inputs/InputText';
+import Textarea from '../DesignSys/Inputs/Textarea';
+import CloseIcon from './../DesignSys/Icons/Solid/X';
 
 const NewMessageStyled = styled.div`
     position: fixed;
     bottom: 0;
     right: 1rem;
     width: 450px;
-    height: 450px;  
+    height: 450px;
     ${tw`bg-gray-700 flex flex-col`}
 
     .header {
@@ -39,22 +39,22 @@ const NewMessageStyled = styled.div`
             ${tw`ml-2`}
         }
     }
-`
+`;
 
 const NewMessage = () => {
     const dispatch = useDispatch();
-    const newMessageReducer = useSelector(state => state.newMessageReducer);
+    const newMessageReducer = useSelector((state) => state.newMessageReducer);
 
     const closeHandler = () => {
-        dispatch({ type: 'CLOSE_NEW_MESSAGE', payload: {} })
-    }
+        dispatch({ type: 'CLOSE_NEW_MESSAGE', payload: {} });
+    };
     const sendHandler = () => {
-        dispatch({ type: 'SEND_MESSAGE', payload: {} })
-    }
+        dispatch({ type: 'SEND_MESSAGE', payload: {} });
+    };
 
     return (
         <>
-            {newMessageReducer.opened &&
+            {newMessageReducer.opened && (
                 <NewMessageStyled>
                     <div className="header">
                         <div className="title">New Message</div>
@@ -77,9 +77,9 @@ const NewMessage = () => {
                         <Button clickHandler={closeHandler}>Descartar</Button>
                     </div>
                 </NewMessageStyled>
-            }
+            )}
         </>
-    )
-}
+    );
+};
 
-export default NewMessage
+export default NewMessage;

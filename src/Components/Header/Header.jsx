@@ -1,11 +1,11 @@
-import React from 'react'
-import HeaderBrand from './HeaderBrand'
-import HeaderSearch from './HeaderSearch'
-import HeaderNavigation from './HeaderNavigation'
-import tw, { styled } from 'twin.macro'
+import React from 'react';
+import HeaderBrand from './HeaderBrand';
+import HeaderSearch from './HeaderSearch';
+import HeaderNavigation from './HeaderNavigation';
+import tw, { styled } from 'twin.macro';
 
 /**
- * 
+ *
  */
 const HeaderStyled = styled.header`
     ${tw`flex items-stretch border-b-2 border-gray-800`}
@@ -18,11 +18,10 @@ const HeaderStyled = styled.header`
         width: 450px;
     }
     .header_navigation {
-
     }
     svg {
         ${tw`fill-current text-gray-400`}
-        
+
         &[fill="none"] {
             fill: none;
             ${tw`stroke-current`}
@@ -30,9 +29,8 @@ const HeaderStyled = styled.header`
     }
 `;
 
-
 /**
- * 
+ *
  */
 const Header = () => {
     return (
@@ -41,7 +39,7 @@ const Header = () => {
             <HeaderSearch />
             <HeaderNavigation />
         </HeaderStyled>
-    )
-}
+    );
+};
 
-export default Header
+export default Header;

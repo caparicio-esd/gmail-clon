@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import tw, { styled } from 'twin.macro';
 
 const ButtonComplete = styled.button`
@@ -17,11 +17,11 @@ const ButtonStyled = styled.button`
     ${tw`uppercase tracking-wide font-semibold`}
 `;
 
-const Button = ({openNewMessage, clickHandler, ...props}) => {
+const Button = ({ openNewMessage, clickHandler, ...props }) => {
     let Btn = null;
-    
+
     switch (props.type) {
-        case "compose":
+        case 'compose':
             Btn = ButtonComplete;
             break;
         default:
@@ -29,8 +29,13 @@ const Button = ({openNewMessage, clickHandler, ...props}) => {
     }
 
     return (
-        <Btn onClick={props.type === "compose" ? openNewMessage : clickHandler} buttonType={props.type}>{props.children}</Btn>
-    )
-}
+        <Btn
+            onClick={props.type === 'compose' ? openNewMessage : clickHandler}
+            buttonType={props.type}
+        >
+            {props.children}
+        </Btn>
+    );
+};
 
-export default Button
+export default Button;

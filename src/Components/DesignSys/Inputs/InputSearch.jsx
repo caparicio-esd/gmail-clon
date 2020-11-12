@@ -1,5 +1,5 @@
-import React from 'react'
-import tw, { styled } from 'twin.macro'
+import React from 'react';
+import tw, { styled } from 'twin.macro';
 
 const InputStyled = styled.input`
     ${tw`border-b-2 border-gray-800 bg-transparent`}
@@ -7,11 +7,8 @@ const InputStyled = styled.input`
     transition: border 350ms ease;
 `;
 
-
 const Input = (props) => {
-    return (
-        <InputStyled type={props.type || 'text'} placeholder={props.placeholder} />
-    )
-}
+    return <InputStyled type={props.type || 'text'} placeholder={props.placeholder} />;
+};
 
-export default Input
+export default Input;

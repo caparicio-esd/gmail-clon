@@ -1,7 +1,7 @@
-import React, { useContext } from 'react'
+import React, { useContext } from 'react';
 import { MessageContext } from './Message';
-import StarIcon from '../../DesignSys/Icons/Solid/Star'
-import { StarIconStyled } from './MessageStyled'
+import StarIcon from '../../DesignSys/Icons/Solid/Star';
+import { StarIconStyled } from './MessageStyled';
 
 const MessageFaved = () => {
     const { message, favMessageHandler } = useContext(MessageContext);
@@ -12,7 +12,7 @@ const MessageFaved = () => {
                 <StarIcon width={20} />
             </StarIconStyled>
         </div>
-    )
-}
+    );
+};
 
-export default MessageFaved
+export default MessageFaved;

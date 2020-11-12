@@ -1,12 +1,12 @@
-import React from 'react'
-import SettingsIcon from './../DesignSys/Icons/Solid/Cog'
-import ViewGridIcon from './../DesignSys/Icons/Solid/ViewGrid'
-import userPicture from './../../Assets/images/35.jpg'
-import tw, { styled } from 'twin.macro'
+import React from 'react';
+import SettingsIcon from './../DesignSys/Icons/Solid/Cog';
+import ViewGridIcon from './../DesignSys/Icons/Solid/ViewGrid';
+import userPicture from './../../Assets/images/35.jpg';
+import tw, { styled } from 'twin.macro';
 
 const HeaderNavigationStyled = styled.div`
     ${tw`flex p-4 items-center justify-end flex-1`}
-    
+
     .header_navigation_apps {
         ${tw`flex items-center`}
 
@@ -20,7 +20,6 @@ const HeaderNavigationStyled = styled.div`
         ${tw`border-4 border-gray-200 border-opacity-25`}
     }
 `;
-
 
 const HeaderNavigation = () => {
     return (
@@ -37,7 +36,7 @@ const HeaderNavigation = () => {
                 <img src={userPicture} alt="" style={{ width: '50px' }} />
             </div>
         </HeaderNavigationStyled>
-    )
-}
+    );
+};
 
-export default HeaderNavigation
+export default HeaderNavigation;

@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react'
-import { useDispatch } from 'react-redux'
-import { MessageStyled } from './MessageStyled'
-import MessageFaved from './MessageFaved'
-import MessageMenu from './MessageMenu'
-import MessageMeta from './MessageMeta'
-import MessagePicture from './MessagePicture'
+import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { MessageStyled } from './MessageStyled';
+import MessageFaved from './MessageFaved';
+import MessageMenu from './MessageMenu';
+import MessageMeta from './MessageMeta';
+import MessagePicture from './MessagePicture';
 
 /**
- * 
+ *
  */
 const MessageContext = React.createContext();
 
 /**
- * 
+ *
  */
 const Message = ({ message }) => {
     const [openedMenu, setOpenedMenu] = useState(message.openedMenu);
@@ -24,7 +24,7 @@ const Message = ({ message }) => {
 
     const favMessageHandler = (ev) => {
         ev.stopPropagation();
-        dispatch({ type: 'CHANGE_FAV', payload: { id: message.id } })
+        dispatch({ type: 'CHANGE_FAV', payload: { id: message.id } });
     };
 
     const openMenuHandler = (ev) => {
@@ -41,17 +41,19 @@ const Message = ({ message }) => {
     });
 
     return (
-        <MessageContext.Provider value={{
-            message,
-            openedMenu,
-            openMenuHandler, 
-            favMessageHandler
-        }}>
+        <MessageContext.Provider
+            value={{
+                message,
+                openedMenu,
+                openMenuHandler,
+                favMessageHandler,
+            }}
+        >
             <MessageStyled
                 selected={message.selected}
                 className="message"
-                onClick={selectMessageHandler}>
-
+                onClick={selectMessageHandler}
+            >
                 <MessagePicture />
                 <div className="message_content">
                     <div className="message_header">
@@ -64,11 +66,10 @@ const Message = ({ message }) => {
                         <MessageFaved />
                     </div>
                 </div>
-
-            </MessageStyled >
+            </MessageStyled>
         </MessageContext.Provider>
-    )
-}
+    );
+};
 
-export { MessageContext }
-export default Message
+export { MessageContext };
+export default Message;

@@ -1,9 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const MailBox = () => {
-    return (
-        <div className="mailbox_section"></div>
-    )
-}
+    return <div className="mailbox_section"></div>;
+};
 
-export default MailBox
+export default MailBox;

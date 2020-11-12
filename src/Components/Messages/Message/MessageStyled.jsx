@@ -1,6 +1,5 @@
 import tw, { styled } from 'twin.macro';
 
-
 const MessageStyled = styled.article`
     ${tw`py-2 px-4 flex border-b border-gray-800`}
     overflow: hidden;
@@ -23,17 +22,17 @@ const MessageStyled = styled.article`
         .message_header {
             ${tw`flex justify-between items-center mb-2`};
 
-            .message_author_name { 
-                ${tw`text-lg font-semibold truncate mr-3`} 
+            .message_author_name {
+                ${tw`text-lg font-semibold truncate mr-3`}
                 ${({ selected }) => selected && tw`text-gray-100`}
             }
-            .message_meta { 
-                ${tw`flex ml-auto mr-2`}; 
-                * { 
+            .message_meta {
+                ${tw`flex ml-auto mr-2`};
+                * {
                     ${tw`mr-1`};
                 }
             }
-            .message_time { 
+            .message_time {
                 ${tw`text-gray-500`}
             }
             .message_menu {
@@ -57,7 +56,7 @@ const MessageStyled = styled.article`
                 }
             }
         }
-        .message_subject { 
+        .message_subject {
             ${tw`mb-1 font-semibold truncate w-4/5 text-gray-300`}
         }
         .message_footer {
@@ -65,7 +64,8 @@ const MessageStyled = styled.article`
             .message_summary {
                 ${tw`truncate w-4/5 text-gray-500`}
             }
-            .message_faved {}
+            .message_faved {
+            }
         }
     }
 `;
@@ -86,5 +86,5 @@ const FolderIconStyled = styled.span`
     }
 `;
 
-export { MessageStyled, StarIconStyled, FolderIconStyled }
-export default MessageStyled
+export { MessageStyled, StarIconStyled, FolderIconStyled };
+export default MessageStyled;

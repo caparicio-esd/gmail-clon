@@ -1,17 +1,16 @@
-import React, { useContext } from 'react'
-import DotsVerticalIcon from '../../DesignSys/Icons/Solid/DotsVertical'
-import CloseIcon from '../../DesignSys/Icons/Solid/X'
-import EditIcon from '../../DesignSys/Icons/Solid/PencilAlt'
+import React, { useContext } from 'react';
+import DotsVerticalIcon from '../../DesignSys/Icons/Solid/DotsVertical';
+import CloseIcon from '../../DesignSys/Icons/Solid/X';
+import EditIcon from '../../DesignSys/Icons/Solid/PencilAlt';
 import { MessageContext } from './Message';
 
 const MessageMenu = () => {
-    const {openedMenu, openMenuHandler} = useContext(MessageContext);
+    const { openedMenu, openMenuHandler } = useContext(MessageContext);
 
     return (
-
         <div className="message_menu">
             <DotsVerticalIcon width={16} onClick={openMenuHandler} />
-            {openedMenu &&
+            {openedMenu && (
                 <div className="message_menu_content">
                     <ul>
                         <li>
@@ -24,9 +23,9 @@ const MessageMenu = () => {
                         </li>
                     </ul>
                 </div>
-            }
+            )}
         </div>
-    )
-}
+    );
+};
 
-export default MessageMenu
+export default MessageMenu;

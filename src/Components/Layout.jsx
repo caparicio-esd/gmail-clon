@@ -1,17 +1,17 @@
-import React from 'react'
-import { useSelector } from 'react-redux'
-import Header from './Header/Header'
-import Sidebar from './Sidebar/Sidebar'
-import tw, { styled } from 'twin.macro'
+import React from 'react';
+import { useSelector } from 'react-redux';
+import Header from './Header/Header';
+import Sidebar from './Sidebar/Sidebar';
+import tw, { styled } from 'twin.macro';
 import Tabs from './Messages/Tabs';
 import LoadedMessage from './Messages/LoadedMessage';
-import NewMessage from './Header/NewMessage'
+import NewMessage from './Header/NewMessage';
 
 const LayoutStyled = styled.div`
     ${tw`bg-gray-900 text-gray-100 flex flex-col`}
     height: 100vh;
     overflow: hidden;
-    
+
     .main {
         ${tw`flex-1 flex`}
         overflow: auto;
@@ -19,7 +19,7 @@ const LayoutStyled = styled.div`
 `;
 
 const Layout = () => {
-    const {selectedMessage} = useSelector(state => state.messagesReducer);
+    const { selectedMessage } = useSelector((state) => state.messagesReducer);
 
     return (
         <LayoutStyled className="gmail">
@@ -31,7 +31,7 @@ const Layout = () => {
             </div>
             <NewMessage />
         </LayoutStyled>
-    )
-}
+    );
+};
 
-export default Layout
+export default Layout;

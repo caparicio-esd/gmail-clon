@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 import tw, { styled } from 'twin.macro';
 import Message from './Message/Message';
-import { useSelector } from 'react-redux'
+import { useSelector } from 'react-redux';
 
 const TabsStyled = styled.div`
     width: 450px;
@@ -17,22 +17,21 @@ const TabsStyled = styled.div`
     }
 `;
 
-
 const Tabs = () => {
-    const {messages} = useSelector(state => state.messagesReducer);
+    const { messages } = useSelector((state) => state.messagesReducer);
 
     return (
         <TabsStyled>
             <div className="tab_navigation">
-                <div className="tab">
-                    tab
-                </div>
+                <div className="tab">tab</div>
             </div>
             <div className="messages">
-                {messages.map(message => <Message key={message.id} message={message} />)}
+                {messages.map((message) => (
+                    <Message key={message.id} message={message} />
+                ))}
             </div>
         </TabsStyled>
-    )
-}
+    );
+};
 
-export default Tabs
+export default Tabs;

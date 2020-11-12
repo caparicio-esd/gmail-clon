@@ -1,13 +1,12 @@
-import React, { useContext } from 'react'
+import React, { useContext } from 'react';
 import { MessageContext } from './Message';
-import FolderIcon from '../../DesignSys/Icons/Solid/Folder'
-import ClipIcon from '../../DesignSys/Icons/Outline/PaperClip'
-import { FolderIconStyled } from './MessageStyled'
-import dayjs from 'dayjs'
-
+import FolderIcon from '../../DesignSys/Icons/Solid/Folder';
+import ClipIcon from '../../DesignSys/Icons/Outline/PaperClip';
+import { FolderIconStyled } from './MessageStyled';
+import dayjs from 'dayjs';
 
 const MessageMeta = () => {
-    const { message, openedMenu, openMenuHandler } = useContext(MessageContext);
+    const { message } = useContext(MessageContext);
     const formatedTime = dayjs(message.time).format('DD/MM/YYYY');
 
     return (
@@ -21,7 +20,7 @@ const MessageMeta = () => {
             </div>
             <div className="message_time">{formatedTime}</div>
         </>
-    )
-}
+    );
+};
 
-export default MessageMeta
+export default MessageMeta;

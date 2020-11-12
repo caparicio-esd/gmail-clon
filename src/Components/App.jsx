@@ -1,8 +1,8 @@
-import React from "react";
-import Layout from "./Layout";
+import React from 'react';
+import Layout from './Layout';
 
-import { Provider } from 'react-redux'
-import store from './../Redux/index'
+import { Provider } from 'react-redux';
+import store from './../Redux/index';
 
 const App = () => {
     return (
