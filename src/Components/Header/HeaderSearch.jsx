@@ -1,6 +1,6 @@
 import React from 'react'
 import SearchIcon from '../DesignSys/Icons/Outline/Search'
-import Input from '../DesignSys/Inputs/Input'
+import InputSearch from '../DesignSys/Inputs/InputSearch'
 import DotsVerticalIcon from '../DesignSys/Icons/Outline/DotsVertical'
 import tw, { styled } from 'twin.macro'
 
@@ -18,7 +18,7 @@ const HeaderSearch = () => {
     return (
         <HeaderSearchStyled className="header_search">
             <SearchIcon style={{width: '21px'}} />
-            <Input placeholder="Busca un mensaje" />
+            <InputSearch placeholder="Busca un mensaje" />
             <DotsVerticalIcon style={{width: '21px'}} />
         </HeaderSearchStyled>
     )

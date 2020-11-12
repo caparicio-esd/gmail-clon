@@ -7,7 +7,7 @@ const initialState = {
 };
 
 const messagesReducer = (state = initialState, { type, payload }) => {
-    let newState = { ...initialState };
+    let newState = { ...state };
     switch (type) {
         case "CHANGE_FAV":
             const idx = newState.messages.findIndex((m) => m.id === payload.id);

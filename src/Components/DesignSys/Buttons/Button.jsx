@@ -17,7 +17,7 @@ const ButtonStyled = styled.button`
     ${tw`uppercase tracking-wide font-semibold`}
 `;
 
-const Button = (props) => {
+const Button = ({openNewMessage, clickHandler, ...props}) => {
     let Btn = null;
     
     switch (props.type) {
@@ -29,7 +29,7 @@ const Button = (props) => {
     }
 
     return (
-        <Btn buttonType={props.type}>{props.children}</Btn>
+        <Btn onClick={props.type == "compose" ? openNewMessage : clickHandler} buttonType={props.type}>{props.children}</Btn>
     )
 }
 

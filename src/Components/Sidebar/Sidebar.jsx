@@ -1,4 +1,5 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import MailBox from './MailBox'
 import Categories from './Categories'
 import Folders from './Folders'
@@ -17,14 +18,19 @@ const SidebarStyled = styled.aside`
 
 
 const Sidebar = () => {
+    const dispatch = useDispatch();
+
+    const openNewMessageHandler = () => {
+        dispatch({ type: 'OPEN_NEW_MESSAGE', payload: {} });
+    }
+
     return (
         <SidebarStyled className="sidebar">
             <div className="compose_new">
-                <Button type="compose">
+                <Button type="compose" openNewMessage={openNewMessageHandler}>
                     <span>Compose</span>
                     <PlusIcon />
                 </Button>
-                <Button>eta...</Button>
             </div>
             <div className="mailbox">
                 <MailBox />

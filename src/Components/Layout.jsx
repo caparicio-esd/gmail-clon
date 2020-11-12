@@ -5,6 +5,7 @@ import Sidebar from './Sidebar/Sidebar'
 import tw, { styled } from 'twin.macro'
 import Tabs from './Messages/Tabs';
 import LoadedMessage from './Messages/LoadedMessage';
+import NewMessage from './Header/NewMessage'
 
 const LayoutStyled = styled.div`
     ${tw`bg-gray-900 text-gray-100 flex flex-col`}
@@ -28,6 +29,7 @@ const Layout = () => {
                 <Tabs />
                 <LoadedMessage selectedMessage={selectedMessage} />
             </div>
+            <NewMessage />
         </LayoutStyled>
     )
 }
